@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Channel Input Configuration - CariCoder</title>
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/input.css">
+</head>
+<body>
+    <div class="container">
+        <div class="channel-header">
+            <h2 id="channel-name"></h2>
+            <div class="channel-status">
+                <span class="status-indicator"></span>
+                <span id="status-text"></span>
+            </div>
+        </div>
+
+        <div class="channel-nav">
+            <a href="channel-overview.html" class="nav-link">Overview</a>
+            <a href="channel-input.html" class="nav-link active">Input</a>
+            <a href="channel-transcoder.html" class="nav-link">Transcoder</a>
+            <a href="channel-output.html" class="nav-link">Output</a>
+            <a href="channel-diagnostic.html" class="nav-link">Diagnostic</a>
+        </div>
+
+        <main role="main">
+            <div class="section-header">
+                <h2>SRT Inputs</h2>
+                <button id="add-input-btn">+ Add Input</button>
+            </div><br>
+            <div id="srt-inputs-container">
+                <!-- Inputs will be rendered here -->
+            </div>
+            <button id="save-changes-btn" class="hidden">Save Changes</button>
+        </main>
+    </div>
+
+    <script type="module" src="modules/state.js"></script>
+    <script type="module" src="channel-input.js"></script>
+</body>
+</html>

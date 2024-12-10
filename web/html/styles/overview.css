@@ -1,0 +1,334 @@
+/* Server Select */
+#server-select {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Charts Container */
+.charts-container {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    margin-bottom: 2rem;
+}
+
+.chart-card {
+    background-color: var(--card-background);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: var(--card-shadow);
+}
+
+.chart-card h3 {
+    margin-top: 0;
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.chart-container {
+    height: 300px;
+    position: relative;
+}
+
+/* Player and Stats Layout */
+.player-stats-container {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 1.5rem;
+}
+
+/* Video Section */
+.video-section {
+    background-color: var(--card-background);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: var(--card-shadow);
+}
+
+.video-container {
+    width: 100%;
+}
+
+#channel-video {
+    width: 100%;
+    aspect-ratio: 16/9;
+    background-color: #000;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+.video-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    background-color: var(--background-color);
+    border-radius: 4px;
+    gap: 1rem;
+}
+
+#refresh-feed {
+    padding: 0.5rem 1rem;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Stats Container */
+.stream-stats-container {
+    background: var(--card-background);
+    border-radius: 8px;
+    box-shadow: var(--card-shadow);
+    max-height: calc(100vh - 200px);
+    overflow-y: auto;
+}
+
+/* Stats Header */
+.stats-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem;
+    border-bottom: 2px solid var(--primary-color);
+    background: linear-gradient(to bottom, #fff, #f8f9fa);
+}
+
+.stats-header h3 {
+    margin: 0;
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+#stats-update-time {
+    font-size: 0.85rem;
+    color: #666;
+    padding: 0.25rem 0.5rem;
+    background: #f8f9fa;
+    border-radius: 4px;
+}
+
+/* Stats Sections */
+.stats-section {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.stats-section:last-child {
+    border-bottom: none;
+}
+
+.stats-section-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.2rem;
+    background: #fff;
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.2s ease;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.stats-section-header:hover {
+    background: linear-gradient(to right, #fff, #fafafa);
+}
+
+.stats-section-header::after {
+    content: '\25BC';
+    position: absolute;
+    right: 1.2rem;
+    color: var(--primary-color);
+    font-size: 0.8rem;
+    opacity: 0.7;
+    transition: transform 0.2s ease;
+}
+
+.stats-section.collapsed .stats-section-header::after {
+    transform: rotate(-90deg);
+}
+
+.stats-section-header span {
+    font-weight: 600;
+    color: var(--text-color);
+    font-size: 1rem;
+    letter-spacing: -0.3px;
+}
+
+/* Stats Content and Grid */
+.stats-content {
+    transition: all 0.3s ease;
+    padding: 0.75rem;
+    background: linear-gradient(to bottom, #fafafa, #fff);
+}
+
+.stats-section.collapsed .stats-content {
+    display: none;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 0.75rem;
+    padding: 0.25rem;
+}
+
+/* Stats Items - Compact Modern Style */
+.stat-item {
+    padding: 0.75rem;
+    background: #fff;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
+}
+
+.stat-item:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    border-color: rgba(var(--primary-color-rgb), 0.1);
+}
+
+.stat-label {
+    font-size: 0.7rem;
+    color: #666;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+.stat-value {
+    font-family: 'SF Mono', SFMono-Regular, ui-monospace, monospace;
+    font-size: 0.9rem;
+    color: var(--text-color);
+    font-weight: 600;
+    letter-spacing: -0.3px;
+}
+
+/* Group specific styling */
+.stat-group {
+    display: grid;
+    gap: 0.75rem;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+/* Status Indicators */
+.stat-value.status-active {
+    color: #10B981;
+}
+
+.stat-value.status-warning {
+    color: #F59E0B;
+}
+
+.stat-value.status-error {
+    color: #EF4444;
+}
+
+/* Icons */
+.icon {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    flex-shrink: 0;
+    opacity: 0.8;
+    filter: grayscale(0.2);
+}
+
+/* Enhance current hover states */
+.stats-section-header:hover .icon {
+    opacity: 1;
+    filter: none;
+}
+
+.input-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='22 12 18 12 15 21 9 3 6 12 2 12'/%3E%3C/svg%3E");
+}
+
+.video-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolygon points='23 7 16 12 23 17 23 7'/%3E%3Crect x='1' y='5' width='15' height='14' rx='2' ry='2'/%3E%3C/svg%3E");
+}
+
+.audio-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 18v-6a9 9 0 0 1 18 0v6'/%3E%3Cpath d='M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z'/%3E%3C/svg%3E");
+}
+
+.performance-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='3'/%3E%3Cpath d='M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z'/%3E%3C/svg%3E");
+}
+
+/* Navigation */
+.channel-nav {
+    display: flex;
+    background-color: var(--card-background);
+    border-radius: 8px 8px 0 0;
+    border-bottom: 2px solid var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.nav-link {
+    padding: 1rem 2rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-weight: bold;
+    color: var(--text-color);
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -2px;
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    background-color: var(--background-color);
+}
+
+.nav-link.active {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+    .player-stats-container {
+        grid-template-columns: 1fr;
+    }
+
+    .video-controls {
+        flex-direction: column;
+    }
+
+    #refresh-feed {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .charts-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stream-stats-container {
+        max-height: none;
+    }
+
+    .stat-item {
+        margin-bottom: 0.5rem;
+    }
+}

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Channel Overview - CariCoder</title>
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/overview.css">
+</head>
+<body>
+    <div class="container">
+        <div class="channel-header">
+            <h2 id="channel-name"></h2>
+            <div class="channel-status">
+                <span class="status-indicator"></span>
+                <span id="status-text"></span>
+            </div>
+            <div class="server-select-container">
+                    <select id="server-select">
+                        <option value="">Select Server</option>
+                    </select>
+                </div>
+
+        </div>
+
+        <div class="channel-nav">
+            <a href="channel-overview.html" class="nav-link active">Overview</a>
+            <a href="channel-input.html" class="nav-link">Input</a>
+            <a href="channel-transcoder.html" class="nav-link">Transcoder</a>
+            <a href="channel-output.html" class="nav-link">Output</a>
+            <a href="channel-diagnostic.html" class="nav-link">Diagnostic</a>
+        </div>
+
+        <main role="main">
+            <!-- Traffic Charts -->
+            <div class="charts-container">
+                <div class="chart-card">
+                    <h3>Input Traffic</h3>
+                    <div class="chart-container">
+                        <canvas id="input-traffic-chart"></canvas>
+                    </div>
+                </div>
+                <div class="chart-card">
+                    <h3>Output Traffic</h3>
+                    <div class="chart-container">
+                        <canvas id="output-traffic-chart"></canvas>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Player and Stats -->
+            <div class="player-stats-container">
+                <!-- Video Player Section -->
+                <div class="video-section">
+                    <div class="video-container">
+                        <video id="channel-video" controls></video>
+                        <div class="video-controls">
+                            <button id="refresh-feed" class="btn">
+                                <i class="fas fa-sync-alt"></i> Refresh
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+    
+
+
+<div class="stream-stats-container">
+    <!-- Header with last update time -->
+    <div class="stats-header">
+        <h3>Stream Statistics</h3>
+        <span id="stats-update-time"></span>
+    </div>
+
+    <!-- Input Stream Info -->
+    <div class="stats-section">
+        <div class="stats-section-header">
+            <i class="icon input-icon"></i>
+            <span>Input Stream</span>
+            
+        </div>
+        <div class="stats-content">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-label">Bitrate</span>
+                    <span class="current-bitrate" data-field="perf.input.bitrate" data-type="bitrate"></span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Latency</span>
+                    <span class="current-bitrate" data-field="perf.input.latencyset" ></span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">RTT</span>
+                    <span class="current-bitrate" data-field="perf.input.rttMs" ></span>
+                </div>
+
+                <div class="stat-item">
+                    <span class="stat-label">Packet Received</span>
+                    <span class="current-bitrate" data-field="perf.input.packetsReceived" ></span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Packet Lost</span>
+                    <span class="current-bitrate" data-field="perf.input.packetsLost" ></span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Packet Retransmitted</span>
+                    <span class="current-bitrate" data-field="perf.input.packetsRetransmitted" ></span>
+                </div>
+
+                <div class="stat-item">
+                    <span class="stat-label">Format</span>
+                    <span class="stat-value" data-field="input.format" data-config="true"></span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Type</span>
+                    <span class="stat-value" data-field="input.type" data-config="true"></span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Program PID</span>
+                    <span class="stat-value" data-field="program.id"  data-config="true"></span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Video PID</span>
+                    <span class="stat-value" data-field="program.videopid" data-type="pidas" data-config="true"></span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Audio PID</span>
+                    <span class="stat-value" data-field="program.audiopid" data-type="pidas" data-config="true"></span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">PMT PID</span>
+                    <span class="stat-value" data-field="program.pmtPid"  data-config="true"></span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">PCR PID</span>
+                    <span class="stat-value" data-field="program.pcrPid"  data-config="true"></span>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Video Stream -->
+    <div class="stats-section">
+        <div class="stats-section-header">
+            <i class="icon video-icon"></i>
+            <span>Video</span>
+        </div>
+        <div class="stats-content">
+            <div class="stats-grid">
+                <!-- Codec Info -->
+                <div class="stat-group">
+                    <div class="stat-item">
+                        <span class="stat-label">Codec</span>
+                        <span class="stat-value" data-field="video.codec.longName" data-config="true"></span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Profile</span>
+                        <span class="stat-value" data-field="video.codec.profile" data-config="true"></span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Level</span>
+                        <span class="stat-value" data-field="video.codec.level" data-config="true"></span>
+                    </div>
+                </div>
+
+                <!-- Format Info -->
+                <div class="stat-group">
+                    <div class="stat-item">
+                        <span class="stat-label">Resolution</span>
+                        <span class="stat-value" data-field="video.format" data-type="resolution" data-config="true"></span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Frame Rate</span>
+                        <span class="stat-value" data-field="video.timing.avgFrameRate" data-type="framerate"></span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Pixel Format</span>
+                        <span class="stat-value" data-field="video.format.pixFmt" data-config="true"></span>
+                    </div>
+                </div>
+
+                <!-- Additional Details -->
+                <div class="stat-group">
+                    <div class="stat-item">
+                        <span class="stat-label">B-Frames</span>
+                        <span class="stat-value" data-field="video.encoding.hasBFrames" data-type="boolean" data-config="true"></span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Display AR</span>
+                        <span class="stat-value" data-field="video.format.displayAspectRatio" data-config="true"></span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Sample AR</span>
+                        <span class="stat-value" data-field="video.format.sampleAspectRatio" data-config="true"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Audio Stream -->
+    <div class="stats-section">
+        <div class="stats-section-header">
+            <i class="icon audio-icon"></i>
+            <span>Audio</span>
+        </div>
+        <div class="stats-content">
+            <div class="stats-grid">
+                <div class="stat-group">
+                    <div class="stat-item">
+                        <span class="stat-label">Codec</span>
+                        <span class="stat-value" data-field="audio.codec.longName" data-config="true"></span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Profile</span>
+                        <span class="stat-value" data-field="audio.codec.profile" data-config="true"></span>
+                    </div>
+                </div>
+                <div class="stat-group">
+                    <div class="stat-item">
+                        <span class="stat-label">Channels</span>
+                        <span class="stat-value" data-field="audio.format.channels" data-config="true"></span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Layout</span>
+                        <span class="stat-value" data-field="audio.format.channelLayout" data-config="true"></span>
+                    </div>
+                </div>
+                <div class="stat-group">
+                    <div class="stat-item">
+                        <span class="stat-label">Sample Rate</span>
+                        <span class="stat-value" data-field="audio.format.sampleRate" data-type="khz" data-config="true"></span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Format</span>
+                        <span class="stat-value" data-field="audio.format.sampleFormat" data-config="true"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Performance Metrics -->
+    <div class="stats-section">
+        <div class="stats-section-header">
+            <i class="icon performance-icon"></i>
+            <span>Performance</span>
+        </div>
+        <div class="stats-content">
+            <div class="stats-grid">
+                <!-- This section is dynamically populated based on input type -->
+                <div id="performance-metrics"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+               </div>
+        </main>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hls.js/1.6.0-beta.1.0.canary.10759/hls.min.js"></script>
+
+    <script type="module" src="modules/player.js"></script>
+    <script type="module" src="channel-overview.js"></script>
+
+
+</body>
+</html>

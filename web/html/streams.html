@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CariCoder Scheduler - Streams/Channels</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="channels.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>CariCoder Scheduler Dashboard</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Dashboard</a></li>
+                    <li><a href="streams.html" class="active">Streams/Channels</a></li>
+                    <li><a href="config.html">Config</a></li>
+                    <li><a href="ha-setup.html">HA Setup</a></li>
+                    <li><a href="logs.html">Logs</a></li>
+                </ul>
+                <div class="server-select-container">
+                    <select id="server-select">
+                        <option value="">Select Server</option>
+                    </select>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <section id="streams-channels" class="dashboard-section active">
+                <div class="controls">
+                    <div class="view-toggle">
+                        <button id="grid-view-btn" class="active">Grid View</button>
+                        <button id="table-view-btn">Table View</button>
+                    </div>
+                </div>
+                <div id="channels-container"></div>
+            </section>
+        </main>
+    </div>
+    <script src="channels.js"></script>
+</body>
+</html>

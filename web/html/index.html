@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CariCoder Scheduler Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>CariCoder Scheduler Dashboard</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Dashboard</a></li>
+                    <li><a href="streams.html">Streams/Channels</a></li>
+                    <li><a href="config.html">Config</a></li>
+                    <li><a href="ha-setup.html">HA Setup</a></li>
+                    <li><a href="logs.html">Logs</a></li>
+                </ul>
+                <div class="server-select-container">
+                    <select id="server-select">
+                        <option value="">Select Server</option>
+                    </select>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <section id="dashboard" class="active">
+                <div class="stats-grid">
+                    <div id="cpu-card" class="stat-card">
+                        <h3>CPU Usage</h3>
+                        <div class="stat-value"></div>
+                        <div class="chart-container">
+                            <canvas id="cpu-live-chart"></canvas>
+                        </div>
+                    </div>
+                    <div id="memory-card" class="stat-card">
+                        <h3>Memory Usage</h3>
+                        <div class="stat-value"></div>
+                        <div class="chart-container">
+                            <canvas id="memory-live-chart"></canvas>
+                        </div>
+                    </div>
+                    <div id="hdd-card" class="stat-card">
+                        <h3>HDD Usage</h3>
+                        <div class="stat-value"></div>
+                        <div class="chart-container">
+                            <canvas id="hdd-live-chart"></canvas>
+                        </div>
+                    </div>
+                    <div id="gpu-card" class="stat-card">
+                        <h3>GPU Usage</h3>
+                        <div class="stat-value"></div>
+                        <div class="chart-container">
+                            <canvas id="gpu-live-chart"></canvas>
+                        </div>
+                    </div>
+                    <div id="channels-card" class="stat-card">
+                        <h3>Channels</h3>
+                        <ul id="channel-status-list"></ul>
+                    </div>
+                </div>
+                <!-- Container for dynamic network cards -->
+                <div id="network-cards-container" class="stats-grid"></div>
+                <!-- Container for dynamic network charts -->
+                <div id="network-charts-container" class="stats-grid"></div>
+            </section>
+        </main>
+    </div>
+    <div class="expanded-overlay"></div>
+    <div class="expanded-chart">
+        <div class="close-button">&times;</div>
+        <h3 class="expanded-chart-title"></h3>
+        <canvas id="expanded-canvas"></canvas>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

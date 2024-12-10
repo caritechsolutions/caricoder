@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Channel Transcoder Configuration - CariCoder</title>
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/channel-transcoder.css">
+</head>
+<body>
+    <div class="container">
+        <div class="channel-header">
+            <h2 id="channel-name"></h2>
+            <div class="channel-status">
+                <span class="status-indicator"></span>
+                <span id="status-text"></span>
+            </div>
+        </div>
+        <div class="channel-nav">
+            <a href="channel-overview.html" class="nav-link">Overview</a>
+            <a href="channel-input.html" class="nav-link">Input</a>
+            <a href="channel-transcoder.html" class="nav-link active">Transcoder</a>
+            <a href="channel-output.html" class="nav-link">Output</a>
+            <a href="channel-diagnostic.html" class="nav-link">Diagnostic</a>
+        </div>
+        <main role="main">
+
+            <!-- Video Transcoding Section -->
+            <div class="section-header">
+                <h2>Video Transcoding</h2>
+                
+            </div>
+            <div class="video-config">
+                <div class="codec-selection">
+                    <label>
+                        Codec:
+                        <select id="video-codec">
+                            <option value="passthrough">Passthrough</option>
+                            <option value="x264enc">H.264 (CPU)</option>
+                            <option value="nvh264enc">H.264 (GPU)</option>
+                            <option value="x265enc">H.265 (CPU)</option>
+                            <option value="nvh265enc">H.265 (GPU)</option>
+                            <option value="mpeg2enc">MPEG-2</option>
+                        </select>
+                    </label>
+                </div>
+                <div id="video-options" class="options-grid hidden">
+                    <!-- Options will be populated based on codec selection -->
+                </div>
+            </div>
+            
+            <br>
+            <!-- Audio Transcoding Section -->
+            <div class="section-header">
+                <h2>Audio Transcoding</h2>
+            </div>
+            <div class="audio-config">
+                <div class="codec-selection">
+                    <label>
+                        Codec:
+                        <select id="audio-codec">
+                            <option value="passthrough">Passthrough</option>
+                            <option value="avenc_aac">AAC</option>
+                            <option value="avenc_ac3">AC3</option>
+                            <option value="avenc_mp2">MP2</option>
+                        </select>
+                    </label>
+                </div>
+                <div id="audio-options" class="options-grid hidden">
+                    <!-- Options will be populated based on codec selection -->
+                </div>
+            </div>
+            
+            <button id="save-changes-btn" class="hidden">
+                <span class="save-text">Save Changes</span>
+            </button>
+        </main>
+    </div>
+    <script type="module" src="modules/state.js"></script>
+    <script type="module" src="channel-transcoder.js"></script>
+</body>
+</html>
