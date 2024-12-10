@@ -54889,3 +54889,1153 @@ Thread: MainThread - Process: 916017
 Thread: MainThread - Process: 916017
 /root/caricoder/channel_monitor.py:380
 
+2024-12-10 16:39:17,766 - __main__ - [DEBUG] - 
+==================================================
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:344
+
+2024-12-10 16:39:17,766 - __main__ - [DEBUG] - Starting monitoring iteration
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:345
+
+2024-12-10 16:39:17,766 - __main__ - [DEBUG] - Loading channel states from running directory
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:315
+
+2024-12-10 16:39:17,766 - __main__ - [DEBUG] - Loaded 0/0 channel states successfully
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:334
+
+2024-12-10 16:39:17,766 - __main__ - [DEBUG] - Monitoring 0 channels
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:348
+
+2024-12-10 16:39:17,767 - __main__ - [DEBUG] - Iteration complete. Sleeping for 5s
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:380
+
+2024-12-10 16:39:22,767 - __main__ - [DEBUG] - 
+==================================================
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:344
+
+2024-12-10 16:39:22,767 - __main__ - [DEBUG] - Starting monitoring iteration
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:345
+
+2024-12-10 16:39:22,767 - __main__ - [DEBUG] - Loading channel states from running directory
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:315
+
+2024-12-10 16:39:22,767 - __main__ - [DEBUG] - Loaded 0/0 channel states successfully
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:334
+
+2024-12-10 16:39:22,768 - __main__ - [DEBUG] - Monitoring 0 channels
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:348
+
+2024-12-10 16:39:22,768 - __main__ - [DEBUG] - Iteration complete. Sleeping for 5s
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:380
+
+2024-12-10 16:39:27,768 - __main__ - [DEBUG] - 
+==================================================
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:344
+
+2024-12-10 16:39:27,768 - __main__ - [DEBUG] - Starting monitoring iteration
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:345
+
+2024-12-10 16:39:27,768 - __main__ - [DEBUG] - Loading channel states from running directory
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:315
+
+2024-12-10 16:39:27,769 - __main__ - [DEBUG] - Loaded 0/0 channel states successfully
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:334
+
+2024-12-10 16:39:27,769 - __main__ - [DEBUG] - Monitoring 0 channels
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:348
+
+2024-12-10 16:39:27,769 - __main__ - [DEBUG] - Iteration complete. Sleeping for 5s
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:380
+
+2024-12-10 16:39:32,769 - __main__ - [DEBUG] - 
+==================================================
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:344
+
+2024-12-10 16:39:32,769 - __main__ - [DEBUG] - Starting monitoring iteration
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:345
+
+2024-12-10 16:39:32,769 - __main__ - [DEBUG] - Loading channel states from running directory
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:315
+
+2024-12-10 16:39:32,770 - __main__ - [DEBUG] - Loaded 0/0 channel states successfully
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:334
+
+2024-12-10 16:39:32,770 - __main__ - [DEBUG] - Monitoring 0 channels
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:348
+
+2024-12-10 16:39:32,770 - __main__ - [DEBUG] - Iteration complete. Sleeping for 5s
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:380
+
+2024-12-10 16:39:37,770 - __main__ - [DEBUG] - 
+==================================================
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:344
+
+2024-12-10 16:39:37,770 - __main__ - [DEBUG] - Starting monitoring iteration
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:345
+
+2024-12-10 16:39:37,771 - __main__ - [DEBUG] - Loading channel states from running directory
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:315
+
+2024-12-10 16:39:37,771 - __main__ - [DEBUG] - Loaded 0/0 channel states successfully
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:334
+
+2024-12-10 16:39:37,771 - __main__ - [DEBUG] - Monitoring 0 channels
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:348
+
+2024-12-10 16:39:37,771 - __main__ - [DEBUG] - Iteration complete. Sleeping for 5s
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:380
+
+2024-12-10 16:39:42,771 - __main__ - [DEBUG] - 
+==================================================
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:344
+
+2024-12-10 16:39:42,772 - __main__ - [DEBUG] - Starting monitoring iteration
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:345
+
+2024-12-10 16:39:42,772 - __main__ - [DEBUG] - Loading channel states from running directory
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:315
+
+2024-12-10 16:39:42,772 - __main__ - [DEBUG] - Loaded 0/0 channel states successfully
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:334
+
+2024-12-10 16:39:42,772 - __main__ - [DEBUG] - Monitoring 0 channels
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:348
+
+2024-12-10 16:39:42,772 - __main__ - [DEBUG] - Iteration complete. Sleeping for 5s
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:380
+
+2024-12-10 16:39:47,773 - __main__ - [DEBUG] - 
+==================================================
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:344
+
+2024-12-10 16:39:47,773 - __main__ - [DEBUG] - Starting monitoring iteration
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:345
+
+2024-12-10 16:39:47,773 - __main__ - [DEBUG] - Loading channel states from running directory
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:315
+
+2024-12-10 16:39:47,773 - __main__ - [DEBUG] - Loaded 0/0 channel states successfully
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:334
+
+2024-12-10 16:39:47,773 - __main__ - [DEBUG] - Monitoring 0 channels
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:348
+
+2024-12-10 16:39:47,773 - __main__ - [DEBUG] - Iteration complete. Sleeping for 5s
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:380
+
+2024-12-10 16:39:52,774 - __main__ - [DEBUG] - 
+==================================================
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:344
+
+2024-12-10 16:39:52,774 - __main__ - [DEBUG] - Starting monitoring iteration
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:345
+
+2024-12-10 16:39:52,774 - __main__ - [DEBUG] - Loading channel states from running directory
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:315
+
+2024-12-10 16:39:52,774 - __main__ - [DEBUG] - Loaded 0/0 channel states successfully
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:334
+
+2024-12-10 16:39:52,775 - __main__ - [DEBUG] - Monitoring 0 channels
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:348
+
+2024-12-10 16:39:52,775 - __main__ - [DEBUG] - Iteration complete. Sleeping for 5s
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:380
+
+2024-12-10 16:39:57,775 - __main__ - [DEBUG] - 
+==================================================
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:344
+
+2024-12-10 16:39:57,775 - __main__ - [DEBUG] - Starting monitoring iteration
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:345
+
+2024-12-10 16:39:57,775 - __main__ - [DEBUG] - Loading channel states from running directory
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:315
+
+2024-12-10 16:39:57,776 - __main__ - [DEBUG] - Loaded 0/0 channel states successfully
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:334
+
+2024-12-10 16:39:57,776 - __main__ - [DEBUG] - Monitoring 0 channels
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:348
+
+2024-12-10 16:39:57,776 - __main__ - [DEBUG] - Iteration complete. Sleeping for 5s
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:380
+
+2024-12-10 16:40:02,776 - __main__ - [DEBUG] - 
+==================================================
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:344
+
+2024-12-10 16:40:02,776 - __main__ - [DEBUG] - Starting monitoring iteration
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:345
+
+2024-12-10 16:40:02,776 - __main__ - [DEBUG] - Loading channel states from running directory
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:315
+
+2024-12-10 16:40:02,777 - __main__ - [DEBUG] - Loaded 0/0 channel states successfully
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:334
+
+2024-12-10 16:40:02,777 - __main__ - [DEBUG] - Monitoring 0 channels
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:348
+
+2024-12-10 16:40:02,777 - __main__ - [DEBUG] - Iteration complete. Sleeping for 5s
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:380
+
+2024-12-10 16:40:07,777 - __main__ - [DEBUG] - 
+==================================================
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:344
+
+2024-12-10 16:40:07,777 - __main__ - [DEBUG] - Starting monitoring iteration
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:345
+
+2024-12-10 16:40:07,778 - __main__ - [DEBUG] - Loading channel states from running directory
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:315
+
+2024-12-10 16:40:07,778 - __main__ - [DEBUG] - Loaded 0/0 channel states successfully
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:334
+
+2024-12-10 16:40:07,778 - __main__ - [DEBUG] - Monitoring 0 channels
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:348
+
+2024-12-10 16:40:07,778 - __main__ - [DEBUG] - Iteration complete. Sleeping for 5s
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:380
+
+2024-12-10 16:40:12,778 - __main__ - [DEBUG] - 
+==================================================
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:344
+
+2024-12-10 16:40:12,779 - __main__ - [DEBUG] - Starting monitoring iteration
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:345
+
+2024-12-10 16:40:12,779 - __main__ - [DEBUG] - Loading channel states from running directory
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:315
+
+2024-12-10 16:40:12,780 - __main__ - [DEBUG] - Loaded 0/0 channel states successfully
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:334
+
+2024-12-10 16:40:12,780 - __main__ - [DEBUG] - Monitoring 0 channels
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:348
+
+2024-12-10 16:40:12,780 - __main__ - [DEBUG] - Iteration complete. Sleeping for 5s
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:380
+
+2024-12-10 16:40:17,780 - __main__ - [DEBUG] - 
+==================================================
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:344
+
+2024-12-10 16:40:17,780 - __main__ - [DEBUG] - Starting monitoring iteration
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:345
+
+2024-12-10 16:40:17,781 - __main__ - [DEBUG] - Loading channel states from running directory
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:315
+
+2024-12-10 16:40:17,781 - __main__ - [DEBUG] - Loaded 0/0 channel states successfully
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:334
+
+2024-12-10 16:40:17,781 - __main__ - [DEBUG] - Monitoring 0 channels
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:348
+
+2024-12-10 16:40:17,781 - __main__ - [DEBUG] - Iteration complete. Sleeping for 5s
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:380
+
+2024-12-10 16:40:22,781 - __main__ - [DEBUG] - 
+==================================================
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:344
+
+2024-12-10 16:40:22,782 - __main__ - [DEBUG] - Starting monitoring iteration
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:345
+
+2024-12-10 16:40:22,782 - __main__ - [DEBUG] - Loading channel states from running directory
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:315
+
+2024-12-10 16:40:22,782 - __main__ - [DEBUG] - Loaded 0/0 channel states successfully
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:334
+
+2024-12-10 16:40:22,782 - __main__ - [DEBUG] - Monitoring 0 channels
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:348
+
+2024-12-10 16:40:22,782 - __main__ - [DEBUG] - Iteration complete. Sleeping for 5s
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:380
+
+2024-12-10 16:40:27,783 - __main__ - [DEBUG] - 
+==================================================
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:344
+
+2024-12-10 16:40:27,783 - __main__ - [DEBUG] - Starting monitoring iteration
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:345
+
+2024-12-10 16:40:27,783 - __main__ - [DEBUG] - Loading channel states from running directory
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:315
+
+2024-12-10 16:40:27,783 - __main__ - [DEBUG] - Loaded 0/0 channel states successfully
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:334
+
+2024-12-10 16:40:27,783 - __main__ - [DEBUG] - Monitoring 0 channels
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:348
+
+2024-12-10 16:40:27,783 - __main__ - [DEBUG] - Iteration complete. Sleeping for 5s
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:380
+
+2024-12-10 16:40:32,784 - __main__ - [DEBUG] - 
+==================================================
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:344
+
+2024-12-10 16:40:32,784 - __main__ - [DEBUG] - Starting monitoring iteration
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:345
+
+2024-12-10 16:40:32,784 - __main__ - [DEBUG] - Loading channel states from running directory
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:315
+
+2024-12-10 16:40:32,784 - __main__ - [DEBUG] - Loaded 0/0 channel states successfully
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:334
+
+2024-12-10 16:40:32,785 - __main__ - [DEBUG] - Monitoring 0 channels
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:348
+
+2024-12-10 16:40:32,785 - __main__ - [DEBUG] - Iteration complete. Sleeping for 5s
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:380
+
+2024-12-10 16:40:37,785 - __main__ - [DEBUG] - 
+==================================================
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:344
+
+2024-12-10 16:40:37,785 - __main__ - [DEBUG] - Starting monitoring iteration
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:345
+
+2024-12-10 16:40:37,785 - __main__ - [DEBUG] - Loading channel states from running directory
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:315
+
+2024-12-10 16:40:37,786 - __main__ - [DEBUG] - Loaded 0/0 channel states successfully
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:334
+
+2024-12-10 16:40:37,786 - __main__ - [DEBUG] - Monitoring 0 channels
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:348
+
+2024-12-10 16:40:37,786 - __main__ - [DEBUG] - Iteration complete. Sleeping for 5s
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:380
+
+2024-12-10 16:40:42,786 - __main__ - [DEBUG] - 
+==================================================
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:344
+
+2024-12-10 16:40:42,786 - __main__ - [DEBUG] - Starting monitoring iteration
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:345
+
+2024-12-10 16:40:42,787 - __main__ - [DEBUG] - Loading channel states from running directory
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:315
+
+2024-12-10 16:40:42,787 - __main__ - [DEBUG] - Loaded 0/0 channel states successfully
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:334
+
+2024-12-10 16:40:42,787 - __main__ - [DEBUG] - Monitoring 0 channels
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:348
+
+2024-12-10 16:40:42,787 - __main__ - [DEBUG] - Iteration complete. Sleeping for 5s
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:380
+
+2024-12-10 16:40:47,787 - __main__ - [DEBUG] - 
+==================================================
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:344
+
+2024-12-10 16:40:47,788 - __main__ - [DEBUG] - Starting monitoring iteration
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:345
+
+2024-12-10 16:40:47,788 - __main__ - [DEBUG] - Loading channel states from running directory
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:315
+
+2024-12-10 16:40:47,788 - __main__ - [DEBUG] - Loaded 0/0 channel states successfully
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:334
+
+2024-12-10 16:40:47,788 - __main__ - [DEBUG] - Monitoring 0 channels
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:348
+
+2024-12-10 16:40:47,788 - __main__ - [DEBUG] - Iteration complete. Sleeping for 5s
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:380
+
+2024-12-10 16:40:52,789 - __main__ - [DEBUG] - 
+==================================================
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:344
+
+2024-12-10 16:40:52,789 - __main__ - [DEBUG] - Starting monitoring iteration
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:345
+
+2024-12-10 16:40:52,789 - __main__ - [DEBUG] - Loading channel states from running directory
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:315
+
+2024-12-10 16:40:52,789 - __main__ - [DEBUG] - Loaded 0/0 channel states successfully
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:334
+
+2024-12-10 16:40:52,789 - __main__ - [DEBUG] - Monitoring 0 channels
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:348
+
+2024-12-10 16:40:52,790 - __main__ - [DEBUG] - Iteration complete. Sleeping for 5s
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:380
+
+2024-12-10 16:40:57,790 - __main__ - [DEBUG] - 
+==================================================
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:344
+
+2024-12-10 16:40:57,790 - __main__ - [DEBUG] - Starting monitoring iteration
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:345
+
+2024-12-10 16:40:57,790 - __main__ - [DEBUG] - Loading channel states from running directory
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:315
+
+2024-12-10 16:40:57,790 - __main__ - [DEBUG] - Loaded 0/0 channel states successfully
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:334
+
+2024-12-10 16:40:57,791 - __main__ - [DEBUG] - Monitoring 0 channels
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:348
+
+2024-12-10 16:40:57,791 - __main__ - [DEBUG] - Iteration complete. Sleeping for 5s
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:380
+
+2024-12-10 16:41:02,791 - __main__ - [DEBUG] - 
+==================================================
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:344
+
+2024-12-10 16:41:02,791 - __main__ - [DEBUG] - Starting monitoring iteration
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:345
+
+2024-12-10 16:41:02,791 - __main__ - [DEBUG] - Loading channel states from running directory
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:315
+
+2024-12-10 16:41:02,791 - __main__ - [DEBUG] - Loaded 0/0 channel states successfully
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:334
+
+2024-12-10 16:41:02,792 - __main__ - [DEBUG] - Monitoring 0 channels
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:348
+
+2024-12-10 16:41:02,792 - __main__ - [DEBUG] - Iteration complete. Sleeping for 5s
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:380
+
+2024-12-10 16:41:07,792 - __main__ - [DEBUG] - 
+==================================================
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:344
+
+2024-12-10 16:41:07,792 - __main__ - [DEBUG] - Starting monitoring iteration
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:345
+
+2024-12-10 16:41:07,792 - __main__ - [DEBUG] - Loading channel states from running directory
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:315
+
+2024-12-10 16:41:07,793 - __main__ - [DEBUG] - Loaded 0/0 channel states successfully
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:334
+
+2024-12-10 16:41:07,793 - __main__ - [DEBUG] - Monitoring 0 channels
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:348
+
+2024-12-10 16:41:07,793 - __main__ - [DEBUG] - Iteration complete. Sleeping for 5s
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:380
+
+2024-12-10 16:41:12,793 - __main__ - [DEBUG] - 
+==================================================
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:344
+
+2024-12-10 16:41:12,793 - __main__ - [DEBUG] - Starting monitoring iteration
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:345
+
+2024-12-10 16:41:12,794 - __main__ - [DEBUG] - Loading channel states from running directory
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:315
+
+2024-12-10 16:41:12,794 - __main__ - [DEBUG] - Loaded 0/0 channel states successfully
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:334
+
+2024-12-10 16:41:12,795 - __main__ - [DEBUG] - Monitoring 0 channels
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:348
+
+2024-12-10 16:41:12,795 - __main__ - [DEBUG] - Iteration complete. Sleeping for 5s
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:380
+
+2024-12-10 16:41:17,795 - __main__ - [DEBUG] - 
+==================================================
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:344
+
+2024-12-10 16:41:17,795 - __main__ - [DEBUG] - Starting monitoring iteration
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:345
+
+2024-12-10 16:41:17,795 - __main__ - [DEBUG] - Loading channel states from running directory
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:315
+
+2024-12-10 16:41:17,796 - __main__ - [DEBUG] - Loaded 0/0 channel states successfully
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:334
+
+2024-12-10 16:41:17,796 - __main__ - [DEBUG] - Monitoring 0 channels
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:348
+
+2024-12-10 16:41:17,796 - __main__ - [DEBUG] - Iteration complete. Sleeping for 5s
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:380
+
+2024-12-10 16:41:22,796 - __main__ - [DEBUG] - 
+==================================================
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:344
+
+2024-12-10 16:41:22,796 - __main__ - [DEBUG] - Starting monitoring iteration
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:345
+
+2024-12-10 16:41:22,796 - __main__ - [DEBUG] - Loading channel states from running directory
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:315
+
+2024-12-10 16:41:22,797 - __main__ - [DEBUG] - Loaded 0/0 channel states successfully
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:334
+
+2024-12-10 16:41:22,797 - __main__ - [DEBUG] - Monitoring 0 channels
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:348
+
+2024-12-10 16:41:22,797 - __main__ - [DEBUG] - Iteration complete. Sleeping for 5s
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:380
+
+2024-12-10 16:41:27,797 - __main__ - [DEBUG] - 
+==================================================
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:344
+
+2024-12-10 16:41:27,798 - __main__ - [DEBUG] - Starting monitoring iteration
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:345
+
+2024-12-10 16:41:27,798 - __main__ - [DEBUG] - Loading channel states from running directory
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:315
+
+2024-12-10 16:41:27,798 - __main__ - [DEBUG] - Loaded 0/0 channel states successfully
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:334
+
+2024-12-10 16:41:27,798 - __main__ - [DEBUG] - Monitoring 0 channels
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:348
+
+2024-12-10 16:41:27,798 - __main__ - [DEBUG] - Iteration complete. Sleeping for 5s
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:380
+
+2024-12-10 16:41:32,798 - __main__ - [DEBUG] - 
+==================================================
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:344
+
+2024-12-10 16:41:32,799 - __main__ - [DEBUG] - Starting monitoring iteration
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:345
+
+2024-12-10 16:41:32,799 - __main__ - [DEBUG] - Loading channel states from running directory
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:315
+
+2024-12-10 16:41:32,799 - __main__ - [DEBUG] - Loaded 0/0 channel states successfully
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:334
+
+2024-12-10 16:41:32,799 - __main__ - [DEBUG] - Monitoring 0 channels
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:348
+
+2024-12-10 16:41:32,799 - __main__ - [DEBUG] - Iteration complete. Sleeping for 5s
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:380
+
+2024-12-10 16:41:37,800 - __main__ - [DEBUG] - 
+==================================================
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:344
+
+2024-12-10 16:41:37,800 - __main__ - [DEBUG] - Starting monitoring iteration
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:345
+
+2024-12-10 16:41:37,800 - __main__ - [DEBUG] - Loading channel states from running directory
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:315
+
+2024-12-10 16:41:37,800 - __main__ - [DEBUG] - Loaded 0/0 channel states successfully
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:334
+
+2024-12-10 16:41:37,800 - __main__ - [DEBUG] - Monitoring 0 channels
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:348
+
+2024-12-10 16:41:37,801 - __main__ - [DEBUG] - Iteration complete. Sleeping for 5s
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:380
+
+2024-12-10 16:41:42,801 - __main__ - [DEBUG] - 
+==================================================
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:344
+
+2024-12-10 16:41:42,801 - __main__ - [DEBUG] - Starting monitoring iteration
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:345
+
+2024-12-10 16:41:42,801 - __main__ - [DEBUG] - Loading channel states from running directory
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:315
+
+2024-12-10 16:41:42,801 - __main__ - [DEBUG] - Loaded 0/0 channel states successfully
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:334
+
+2024-12-10 16:41:42,802 - __main__ - [DEBUG] - Monitoring 0 channels
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:348
+
+2024-12-10 16:41:42,802 - __main__ - [DEBUG] - Iteration complete. Sleeping for 5s
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:380
+
+2024-12-10 16:41:47,802 - __main__ - [DEBUG] - 
+==================================================
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:344
+
+2024-12-10 16:41:47,802 - __main__ - [DEBUG] - Starting monitoring iteration
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:345
+
+2024-12-10 16:41:47,802 - __main__ - [DEBUG] - Loading channel states from running directory
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:315
+
+2024-12-10 16:41:47,803 - __main__ - [DEBUG] - Loaded 0/0 channel states successfully
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:334
+
+2024-12-10 16:41:47,803 - __main__ - [DEBUG] - Monitoring 0 channels
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:348
+
+2024-12-10 16:41:47,803 - __main__ - [DEBUG] - Iteration complete. Sleeping for 5s
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:380
+
+2024-12-10 16:41:52,803 - __main__ - [DEBUG] - 
+==================================================
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:344
+
+2024-12-10 16:41:52,803 - __main__ - [DEBUG] - Starting monitoring iteration
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:345
+
+2024-12-10 16:41:52,803 - __main__ - [DEBUG] - Loading channel states from running directory
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:315
+
+2024-12-10 16:41:52,804 - __main__ - [DEBUG] - Loaded 0/0 channel states successfully
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:334
+
+2024-12-10 16:41:52,804 - __main__ - [DEBUG] - Monitoring 0 channels
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:348
+
+2024-12-10 16:41:52,804 - __main__ - [DEBUG] - Iteration complete. Sleeping for 5s
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:380
+
+2024-12-10 16:41:57,804 - __main__ - [DEBUG] - 
+==================================================
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:344
+
+2024-12-10 16:41:57,805 - __main__ - [DEBUG] - Starting monitoring iteration
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:345
+
+2024-12-10 16:41:57,805 - __main__ - [DEBUG] - Loading channel states from running directory
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:315
+
+2024-12-10 16:41:57,805 - __main__ - [DEBUG] - Loaded 0/0 channel states successfully
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:334
+
+2024-12-10 16:41:57,805 - __main__ - [DEBUG] - Monitoring 0 channels
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:348
+
+2024-12-10 16:41:57,805 - __main__ - [DEBUG] - Iteration complete. Sleeping for 5s
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:380
+
+2024-12-10 16:42:02,805 - __main__ - [DEBUG] - 
+==================================================
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:344
+
+2024-12-10 16:42:02,806 - __main__ - [DEBUG] - Starting monitoring iteration
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:345
+
+2024-12-10 16:42:02,806 - __main__ - [DEBUG] - Loading channel states from running directory
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:315
+
+2024-12-10 16:42:02,806 - __main__ - [DEBUG] - Loaded 0/0 channel states successfully
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:334
+
+2024-12-10 16:42:02,806 - __main__ - [DEBUG] - Monitoring 0 channels
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:348
+
+2024-12-10 16:42:02,806 - __main__ - [DEBUG] - Iteration complete. Sleeping for 5s
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:380
+
+2024-12-10 16:42:07,807 - __main__ - [DEBUG] - 
+==================================================
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:344
+
+2024-12-10 16:42:07,807 - __main__ - [DEBUG] - Starting monitoring iteration
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:345
+
+2024-12-10 16:42:07,807 - __main__ - [DEBUG] - Loading channel states from running directory
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:315
+
+2024-12-10 16:42:07,807 - __main__ - [DEBUG] - Loaded 0/0 channel states successfully
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:334
+
+2024-12-10 16:42:07,807 - __main__ - [DEBUG] - Monitoring 0 channels
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:348
+
+2024-12-10 16:42:07,808 - __main__ - [DEBUG] - Iteration complete. Sleeping for 5s
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:380
+
+2024-12-10 16:42:12,808 - __main__ - [DEBUG] - 
+==================================================
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:344
+
+2024-12-10 16:42:12,808 - __main__ - [DEBUG] - Starting monitoring iteration
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:345
+
+2024-12-10 16:42:12,808 - __main__ - [DEBUG] - Loading channel states from running directory
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:315
+
+2024-12-10 16:42:12,808 - __main__ - [DEBUG] - Loaded 0/0 channel states successfully
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:334
+
+2024-12-10 16:42:12,809 - __main__ - [DEBUG] - Monitoring 0 channels
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:348
+
+2024-12-10 16:42:12,809 - __main__ - [DEBUG] - Iteration complete. Sleeping for 5s
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:380
+
+2024-12-10 16:42:17,809 - __main__ - [DEBUG] - 
+==================================================
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:344
+
+2024-12-10 16:42:17,809 - __main__ - [DEBUG] - Starting monitoring iteration
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:345
+
+2024-12-10 16:42:17,809 - __main__ - [DEBUG] - Loading channel states from running directory
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:315
+
+2024-12-10 16:42:17,810 - __main__ - [DEBUG] - Loaded 0/0 channel states successfully
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:334
+
+2024-12-10 16:42:17,810 - __main__ - [DEBUG] - Monitoring 0 channels
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:348
+
+2024-12-10 16:42:17,810 - __main__ - [DEBUG] - Iteration complete. Sleeping for 5s
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:380
+
+2024-12-10 16:42:22,810 - __main__ - [DEBUG] - 
+==================================================
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:344
+
+2024-12-10 16:42:22,810 - __main__ - [DEBUG] - Starting monitoring iteration
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:345
+
+2024-12-10 16:42:22,811 - __main__ - [DEBUG] - Loading channel states from running directory
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:315
+
+2024-12-10 16:42:22,811 - __main__ - [DEBUG] - Loaded 0/0 channel states successfully
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:334
+
+2024-12-10 16:42:22,811 - __main__ - [DEBUG] - Monitoring 0 channels
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:348
+
+2024-12-10 16:42:22,811 - __main__ - [DEBUG] - Iteration complete. Sleeping for 5s
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:380
+
+2024-12-10 16:42:27,811 - __main__ - [DEBUG] - 
+==================================================
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:344
+
+2024-12-10 16:42:27,812 - __main__ - [DEBUG] - Starting monitoring iteration
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:345
+
+2024-12-10 16:42:27,812 - __main__ - [DEBUG] - Loading channel states from running directory
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:315
+
+2024-12-10 16:42:27,812 - __main__ - [DEBUG] - Loaded 0/0 channel states successfully
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:334
+
+2024-12-10 16:42:27,812 - __main__ - [DEBUG] - Monitoring 0 channels
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:348
+
+2024-12-10 16:42:27,812 - __main__ - [DEBUG] - Iteration complete. Sleeping for 5s
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:380
+
+2024-12-10 16:42:32,813 - __main__ - [DEBUG] - 
+==================================================
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:344
+
+2024-12-10 16:42:32,813 - __main__ - [DEBUG] - Starting monitoring iteration
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:345
+
+2024-12-10 16:42:32,813 - __main__ - [DEBUG] - Loading channel states from running directory
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:315
+
+2024-12-10 16:42:32,814 - __main__ - [DEBUG] - Loaded 0/0 channel states successfully
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:334
+
+2024-12-10 16:42:32,814 - __main__ - [DEBUG] - Monitoring 0 channels
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:348
+
+2024-12-10 16:42:32,814 - __main__ - [DEBUG] - Iteration complete. Sleeping for 5s
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:380
+
+2024-12-10 16:42:37,814 - __main__ - [DEBUG] - 
+==================================================
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:344
+
+2024-12-10 16:42:37,814 - __main__ - [DEBUG] - Starting monitoring iteration
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:345
+
+2024-12-10 16:42:37,835 - __main__ - [DEBUG] - Loading channel states from running directory
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:315
+
+2024-12-10 16:42:37,835 - __main__ - [DEBUG] - Loaded 0/0 channel states successfully
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:334
+
+2024-12-10 16:42:37,835 - __main__ - [DEBUG] - Monitoring 0 channels
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:348
+
+2024-12-10 16:42:37,836 - __main__ - [DEBUG] - Iteration complete. Sleeping for 5s
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:380
+
+2024-12-10 16:42:42,836 - __main__ - [DEBUG] - 
+==================================================
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:344
+
+2024-12-10 16:42:42,836 - __main__ - [DEBUG] - Starting monitoring iteration
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:345
+
+2024-12-10 16:42:42,836 - __main__ - [DEBUG] - Loading channel states from running directory
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:315
+
+2024-12-10 16:42:42,836 - __main__ - [DEBUG] - Loaded 0/0 channel states successfully
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:334
+
+2024-12-10 16:42:42,837 - __main__ - [DEBUG] - Monitoring 0 channels
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:348
+
+2024-12-10 16:42:42,837 - __main__ - [DEBUG] - Iteration complete. Sleeping for 5s
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:380
+
+2024-12-10 16:42:47,837 - __main__ - [DEBUG] - 
+==================================================
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:344
+
+2024-12-10 16:42:47,837 - __main__ - [DEBUG] - Starting monitoring iteration
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:345
+
+2024-12-10 16:42:47,837 - __main__ - [DEBUG] - Loading channel states from running directory
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:315
+
+2024-12-10 16:42:47,837 - __main__ - [DEBUG] - Loaded 0/0 channel states successfully
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:334
+
+2024-12-10 16:42:47,838 - __main__ - [DEBUG] - Monitoring 0 channels
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:348
+
+2024-12-10 16:42:47,838 - __main__ - [DEBUG] - Iteration complete. Sleeping for 5s
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:380
+
+2024-12-10 16:42:52,838 - __main__ - [DEBUG] - 
+==================================================
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:344
+
+2024-12-10 16:42:52,838 - __main__ - [DEBUG] - Starting monitoring iteration
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:345
+
+2024-12-10 16:42:52,838 - __main__ - [DEBUG] - Loading channel states from running directory
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:315
+
+2024-12-10 16:42:52,839 - __main__ - [DEBUG] - Loaded 0/0 channel states successfully
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:334
+
+2024-12-10 16:42:52,839 - __main__ - [DEBUG] - Monitoring 0 channels
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:348
+
+2024-12-10 16:42:52,839 - __main__ - [DEBUG] - Iteration complete. Sleeping for 5s
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:380
+
+2024-12-10 16:42:57,839 - __main__ - [DEBUG] - 
+==================================================
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:344
+
+2024-12-10 16:42:57,839 - __main__ - [DEBUG] - Starting monitoring iteration
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:345
+
+2024-12-10 16:42:57,839 - __main__ - [DEBUG] - Loading channel states from running directory
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:315
+
+2024-12-10 16:42:57,840 - __main__ - [DEBUG] - Loaded 0/0 channel states successfully
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:334
+
+2024-12-10 16:42:57,840 - __main__ - [DEBUG] - Monitoring 0 channels
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:348
+
+2024-12-10 16:42:57,840 - __main__ - [DEBUG] - Iteration complete. Sleeping for 5s
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:380
+
+2024-12-10 16:43:02,840 - __main__ - [DEBUG] - 
+==================================================
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:344
+
+2024-12-10 16:43:02,841 - __main__ - [DEBUG] - Starting monitoring iteration
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:345
+
+2024-12-10 16:43:02,841 - __main__ - [DEBUG] - Loading channel states from running directory
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:315
+
+2024-12-10 16:43:02,841 - __main__ - [DEBUG] - Loaded 0/0 channel states successfully
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:334
+
+2024-12-10 16:43:02,841 - __main__ - [DEBUG] - Monitoring 0 channels
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:348
+
+2024-12-10 16:43:02,841 - __main__ - [DEBUG] - Iteration complete. Sleeping for 5s
+Thread: MainThread - Process: 916017
+/root/caricoder/channel_monitor.py:380
+
