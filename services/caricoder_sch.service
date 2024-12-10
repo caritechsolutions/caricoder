@@ -1,0 +1,13 @@
+[Unit]
+Description=CariCoder Scheduler Service
+After=network.target
+
+[Service]
+Type=simple
+User=root
+ExecStart=/usr/bin/python3 /root/caricoder/scheduler_service.py --log-dir /var/log/caricoder_scheduler
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,13 @@
+[Unit]
+Description=CariCoder Channel Manager Service
+After=network.target redis.service
+Requires=redis.service
+
+[Service]
+ExecStart=/usr/bin/python3 /root/caricoder/channel_manager.py --host 0.0.0.0 --port 8001
+WorkingDirectory=/root/caricoder
+Restart=always
+User=root
+
+[Install]
+WantedBy=multi-user.target

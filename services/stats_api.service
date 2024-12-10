@@ -1,0 +1,12 @@
+[Unit]
+Description=Stats API Flask App
+After=network.target
+
+[Service]
+User=root
+WorkingDirectory=/root/caricoder
+ExecStart=/usr/bin/python3 /root/caricoder/stats_api.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

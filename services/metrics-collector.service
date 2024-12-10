@@ -1,0 +1,12 @@
+[Unit]
+Description=Metrics Collector Service
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 /root/caricoder/metrics_collector.py
+WorkingDirectory=/root/caricoder
+Restart=always
+User=root
+
+[Install]
+WantedBy=multi-user.target
