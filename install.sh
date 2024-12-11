@@ -39,6 +39,30 @@ apt install -y python3-flask python3-flask-cors python3-redis python3-psutil pyt
 pip install --break-system-packages aiohttp psutil redis Flask Flask-Cors PyYAML
 
 
+# Configure nginx
+echo "Configuring nginx..."
+if [ -f /etc/nginx/sites-available/default ]; then
+    mv /etc/nginx/sites-available/default /etc/nginx/sites-available/default.bak
+fi
+
+cp nginx/default /etc/nginx/sites-available/default
+
+if [ ! -f /etc/nginx/sites-enabled/default ]; then
+    ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+fi
+
+# Test nginx configuration
+nginx -t
+
+# If test passes, restart nginx
+if [ $? -eq 0 ]; then
+    systemctl restart nginx
+else
+    echo "Nginx configuration test failed"
+    exit 1
+fi
+
+
 # Setup web files
 rm -rf /var/www/html/*
 cp -r web/html/* /var/www/html/
