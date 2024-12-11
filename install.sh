@@ -29,11 +29,9 @@ xargs apt install -y < system-packages.txt
 
 
 # Install Python packages
-<<<<<<< HEAD
-=======
 #pip install -r requirements.txt
 
->>>>>>> 896373952f0c5c8fa073e8faddc0a1da0576ce9f
+
 # Install essential packages via apt
 apt install -y python3-flask python3-flask-cors python3-redis python3-psutil python3-yaml python3-gi python3-pip
 
