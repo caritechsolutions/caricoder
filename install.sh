@@ -25,7 +25,9 @@ cd caricoder
 xargs apt install -y < system-packages.txt
 
 # Install Python packages
-pip install -r requirements.txt
+#pip install -r requirements.txt
+
+sudo apt install $(cat requirements.txt | xargs)
 
 # Setup web files
 rm -rf /var/www/html/*
