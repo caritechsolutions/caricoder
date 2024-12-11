@@ -29,7 +29,11 @@ xargs apt install -y < system-packages.txt
 
 
 # Install Python packages
-pip install -r requirements.txt
+# Install essential packages via apt
+apt install -y python3-flask python3-flask-cors python3-redis python3-psutil python3-yaml python3-gi python3-pip
+
+# Use pip for specific required packages
+pip install --break-system-packages aiohttp psutil redis Flask Flask-Cors PyYAML
 
 
 # Setup web files
