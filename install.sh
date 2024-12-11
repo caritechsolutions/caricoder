@@ -29,7 +29,8 @@ xargs apt install -y < system-packages.txt
 
 
 # Install Python packages
-pip install -r requirements.txt
+#pip install -r requirements.txt
+pip install --break-system-packages -r requirements.txt
 
 
 # Setup web files
