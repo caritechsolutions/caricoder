@@ -36,7 +36,10 @@ xargs apt install -y < system-packages.txt
 apt install -y python3-flask python3-flask-cors python3-redis python3-psutil python3-yaml python3-gi python3-pip
 
 # Use pip for specific required packages
-pip install --break-system-packages aiohttp psutil redis Flask Flask-Cors PyYAML
+#pip install --break-system-packages aiohttp psutil redis Flask Flask-Cors PyYAML
+
+pip install aiohttp psutil redis Flask Flask-Cors PyYAML
+
 
 
 # Configure nginx
