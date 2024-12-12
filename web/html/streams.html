@@ -6,6 +6,7 @@
     <title>CariCoder Scheduler - Streams/Channels</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="channels.css">
+    <link rel="stylesheet" href="streams_modal.css">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
@@ -26,6 +27,11 @@
                     </select>
                 </div>
             </nav>
+
+           <!-- Add this button to streams.html header -->
+<button id="add-channel-btn" class="bg-primary text-white px-4 py-2 rounded-lg flex items-center gap-2">
+    <span>Add Channel</span>
+</button>
         </header>
 
         <main>
@@ -40,6 +46,104 @@
             </section>
         </main>
     </div>
+
+
+
+<!-- Add this modal markup before the closing body tag -->
+<div id="channel-wizard" class="wizard-modal hidden">
+    <div class="wizard-content">
+        <div class="wizard-header">
+            <h2>Add New Channel</h2>
+            <button class="close-btn">&times;</button>
+        </div>
+        
+        <div class="wizard-steps">
+            <div class="step active" data-step="1">Channel Name</div>
+            <div class="step" data-step="2">Input</div>
+            <div class="step" data-step="3">Transcoding</div>
+            <div class="step" data-step="4">Output</div>
+        </div>
+
+        <div class="wizard-body">
+            <!-- Step 1: Channel Name -->
+            <div class="step-content active" data-step="1">
+                <div class="form-group">
+                    <label>Channel Name</label>
+                    <input type="text" id="channel-name-input" class="form-control">
+                </div>
+            </div>
+
+            <!-- Step 2: Input -->
+            <div class="step-content" data-step="2">
+                <div class="form-group">
+                    <label>Input Type</label>
+                    <select id="input-type" class="form-control">
+                        <option value="srtsrc">SRT</option>
+                        <option value="udpsrc">UDP</option>
+                        <option value="hlssrc">HLS</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>URI</label>
+                    <input type="text" id="input-uri" class="form-control">
+                </div>
+            </div>
+
+            <!-- Step 3: Transcoding -->
+            <div class="step-content" data-step="3">
+                <div class="form-group">
+                    <label>Video Codec</label>
+                    <select id="video-codec" class="form-control">
+                        <option value="passthrough">Passthrough</option>
+                        <option value="x264enc">H.264</option>
+                        <option value="x265enc">H.265</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Audio Codec</label>
+                    <select id="audio-codec" class="form-control">
+                        <option value="passthrough">Passthrough</option>
+                        <option value="avenc_aac">AAC</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Step 4: Output -->
+            <div class="step-content" data-step="4">
+                <div class="form-group">
+                    <label>Output Type</label>
+                    <select id="output-type" class="form-control">
+                        <option value="udpsink">UDP</option>
+                        <option value="hlssink">HLS</option>
+                    </select>
+                </div>
+                <div id="udp-settings">
+                    <div class="form-group">
+                        <label>Host</label>
+                        <input type="text" id="output-host" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Port</label>
+                        <input type="number" id="output-port" class="form-control">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="wizard-footer">
+            <button id="prev-btn" class="btn btn-secondary" disabled>Previous</button>
+            <button id="next-btn" class="btn btn-primary">Next</button>
+        </div>
+    </div>
+</div>
     <script src="channels.js"></script>
+    
+<script type="module">
+    import ChannelWizard from './streams_modal.js';
+    document.addEventListener('DOMContentLoaded', () => {
+        window.channelWizard = new ChannelWizard();
+    });
+</script>
+
 </body>
 </html>

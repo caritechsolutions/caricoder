@@ -124,10 +124,12 @@ async function initializePage() {
     });
 
     // Get server from local storage or default to first server
-   // const server = localStorage.getItem('selectedServer') || '192.168.110.42';
-   // channelState.setServer(server);
+    // const server = localStorage.getItem('selectedServer') || '192.168.110.103';
+    
 
-// Get server IP from getServerIP() function
+   //  channelState.setServer(server);
+
+    // Get server IP from getServerIP() function
     const serverIP = await getServerIP();
     channelState.setServer(serverIP);
 
