@@ -9,6 +9,7 @@ from flask_cors import CORS
 import psutil
 import signal
 import time
+import yaml
 import os  # Add this import
 from pathlib import Path
 from typing import List, Dict, Optional
@@ -552,6 +553,45 @@ class ChannelManager:
         except Exception as e:
             self.logger.error(f"Error managing state file for {channel_name}: {e}")
 
+#mainindent
+    def reload_config(self):
+        """Reload configuration and update internal channel dictionary"""
+        try:
+            # Explicitly reload the configuration file
+            self.config = Configuration()
+
+            # Clear existing channels
+            self.channels.clear()
+
+            # Reload configuration
+            channel_names = self.config.config['channels'].keys()
+
+            for channel_name in channel_names:
+                channel_config = self.config.get_channel_settings(channel_name)
+                
+                input_type = self._detect_input_type(channel_config)
+                transcoder_type = self._detect_transcoder_type(channel_config)
+                output_types = self._detect_output_types(channel_config)
+
+                self.channels[channel_name] = ChannelConfig(
+                    name=channel_name,
+                    input_type=input_type,
+                    transcoder_type=transcoder_type,
+                    output_types=output_types,
+                    raw_config=channel_config
+                )
+
+                self.logger.info(f"Reloaded channel: {channel_name}")
+                self.logger.info(f"  Input type: {input_type.name}")
+                self.logger.info(f"  Transcoder type: {transcoder_type.name}")
+                self.logger.info(f"  Output types: {[ot.name for ot in output_types]}")
+
+            return True
+
+        except Exception as e:
+            self.logger.error(f"Error reloading config: {str(e)}")
+            return False
+
 # Flask application
 app = Flask(__name__)
 CORS(app)
@@ -599,6 +639,89 @@ def list_channels():
             "running": name in channel_manager.processes
         }
     return jsonify({"channels": channels})
+
+@app.route('/config/add-channel', methods=['POST'])
+def add_channel():
+    try:
+        data = request.get_json()
+        if not data or 'name' not in data or 'config' not in data:
+            return jsonify({"error": "Invalid request data"}), 400
+
+        config_path = "/root/caricoder/config.yaml"
+        
+        # Load current config
+        with open(config_path, 'r') as f:
+            config = yaml.safe_load(f)
+            
+        if not config:
+            config = {'channels': {}}
+        elif 'channels' not in config:
+            config['channels'] = {}
+            
+        # Check if channel already exists
+        if data['name'] in config['channels']:
+            return jsonify({"error": "Channel already exists"}), 400
+            
+        # Add new channel
+        config['channels'][data['name']] = data['config']
+        
+        # Write updated config
+        with open(config_path, 'w') as f:
+            yaml.dump(config, f, default_flow_style=False, sort_keys=False)
+
+        # Reload configuration
+        success = channel_manager.reload_config()
+        
+        if not success:
+            return jsonify({"error": "Failed to reload configuration"}), 500
+            
+        # Use the channel manager's logger
+        channel_manager.logger.info(f"Added new channel: {data['name']}")
+        
+            
+        return jsonify({"status": "success"}), 200
+        
+    except Exception as e:
+        channel_manager.logger.error(f"Error adding channel: {str(e)}")
+        return jsonify({"error": str(e)}), 500@app.route('/config/delete-channel', methods=['POST'])
+
+@app.route('/config/delete-channel', methods=['POST'])
+def delete_channel():
+    try:
+        data = request.get_json()
+        if not data or 'name' not in data:
+            return jsonify({"error": "Channel name is required"}), 400
+
+        config_path = "/root/caricoder/config.yaml"
+        
+        # Load current config
+        with open(config_path, 'r') as f:
+            config = yaml.safe_load(f) or {'channels': {}}
+            
+        # Check if channel exists
+        if data['name'] not in config['channels']:
+            return jsonify({"error": "Channel does not exist"}), 404
+            
+        # Remove channel
+        del config['channels'][data['name']]
+        
+        # Write updated config
+        with open(config_path, 'w') as f:
+            yaml.dump(config, f, default_flow_style=False, sort_keys=False)
+            
+        # Reload configuration
+        success = channel_manager.reload_config()
+        
+        if not success:
+            return jsonify({"error": "Failed to reload configuration"}), 500
+            
+        channel_manager.logger.info(f"Deleted channel: {data['name']}")
+        return jsonify({"status": "success"}), 200
+        
+    except Exception as e:
+        channel_manager.logger.error(f"Error deleting channel: {str(e)}")
+        return jsonify({"error": str(e)}), 500
+
 
 def main():
     global channel_manager

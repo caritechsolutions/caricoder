@@ -1,140 +1,140 @@
 channels:
   channel1:
     inputs:
-      - type: srtsrc
-        uri: srt://newproxy.vidivu.tv:6060
-        options:
-          latency: 1000
-        demux:
-          program-number: 15
-          video-pid: '0xd6'
-          audio-pid: '0xd8'
+    - type: srtsrc
+      uri: srt://newproxy.vidivu.tv:6060
+      options:
+        latency: 1000
+      demux:
+        program-number: 15
+        video-pid: '0xd6'
+        audio-pid: '0xd8'
     outputs:
-      - type: udpsink
-        host: 224.100.1.1
-        port: 9000
+    - type: udpsink
+      host: 224.100.1.1
+      port: 9000
     transcoding:
       video:
         codec: passthrough
         options:
-          bitrate: 2500  # in kbps
+          bitrate: 2500
           tune: zerolatency
           key-int-max: 60
       audio:
         codec: passthrough
         options:
-          bitrate: 48  # kbps
+          bitrate: 48
     mux:
       type: mpegtsmux
-      bitrate: 5000  # in kbps
+      bitrate: 5000
       program-number: 1000
       video-pid: '100'
       audio-pid: '101'
   channel2:
     inputs:
-      - type: udpsrc
-        uri: udp://224.100.1.5:49500
-        options:
-          do-timestamp: true
-          buffer-size: 2097152  # 2MB buffer
-        demux:
-          program-number: 2080
-          video-pid: '0x821'
-          audio-pid: '0x822'
+    - type: udpsrc
+      uri: udp://224.100.1.5:49500
+      options:
+        do-timestamp: true
+        buffer-size: 2097152
+      demux:
+        program-number: 2080
+        video-pid: '0x821'
+        audio-pid: '0x822'
     outputs:
-      - type: udpsink
-        host: 224.100.1.1
-        port: 9000
+    - type: udpsink
+      host: 224.100.1.1
+      port: 9000
     transcoding:
       type: cpu_only
       video:
         streams:
-          - codec: x264enc
-            resolution:
-              width: 1920
-              height: 1080
-            options:
-              bitrate: 4000  # in kbps
-              tune: zerolatency
-              key-int-max: 60
+        - codec: x264enc
+          resolution:
+            width: 1920
+            height: 1080
+          options:
+            bitrate: 4000
+            tune: zerolatency
+            key-int-max: 60
       audio:
         codec: passthrough
         options:
-          bitrate: 128  # kbps
+          bitrate: 128
     mux:
       type: mpegtsmux
-      bitrate: 5000  # in kbps
+      bitrate: 5000
       program-number: 2001
       video-pid: '200'
       audio-pid: '201'
   channel3:
     inputs:
-      - type: srtsrc
-        uri: srt://192.168.2.100:20002
-        options:
-          latency: 1000
-        demux:
-          program-number: 1930
-          video-pid: '0x78b'
-          audio-pid: '0x78c'
+    - type: srtsrc
+      uri: srt://192.168.2.100:20002
+      options:
+        latency: 1000
+      demux:
+        program-number: 1930
+        video-pid: '0x78b'
+        audio-pid: '0x78c'
     outputs:
-      - type: udpsink
-        host: 224.100.6.1
-        port: 9000
-      - type: udpsink
-        host: 224.100.6.3
-        port: 9000
-      - type: udpsink
-        host: 224.100.7.1
-        port: 9000
-      - type: udpsink
-        host: 224.100.7.3
-        port: 9000
+    - type: udpsink
+      host: 224.100.6.1
+      port: 9000
+    - type: udpsink
+      host: 224.100.6.3
+      port: 9000
+    - type: udpsink
+      host: 224.100.7.1
+      port: 9000
+    - type: udpsink
+      host: 224.100.7.3
+      port: 9000
     transcoding:
       type: cpu_only
       video:
         streams:
-          - codec: x264enc
-            resolution:
-              width: 1920
-              height: 1080
-            options:
-              bitrate: 4000  # in kbps
-              tune: zerolatency
-              key-int-max: 60
+        - codec: x264enc
+          resolution:
+            width: 1920
+            height: 1080
+          options:
+            bitrate: 4000
+            tune: zerolatency
+            key-int-max: 60
       audio:
         codec: passthrough
         options:
-          bitrate: 192  # kbps
+          bitrate: 192
     mux:
       type: mpegtsmux
-      bitrate: 1000  # in kbps
+      bitrate: 1000
       program-number: 3001
       video-pid: '300'
       audio-pid: '301'
   channel4:
     inputs:
-      - type: srtsrc
-        uri: srt://192.168.2.100:20002
-        options:
-          latency: 1000
-        demux:
-          program-number: 1940
-          video-pid: '0x78d'
-          audio-pid: '0x78e'
-    outputs:
-      - type: tcpserversink
-        host: 192.168.110.2
-        port: 8888
-      - type: udpsink
-        host: 224.100.1.1
-        port: 9000
-      - type: rtmpsink
-        location: rtmp://newproxy.vidivu.tv/chats/caricoder
-      - type: srtsink
-        uri: srt://:7001
-        mode: 2
+    - type: srtsrc
+      uri: srt://192.168.2.100:20002
+      options:
         latency: 1000
+      demux:
+        program-number: 1940
+        video-pid: '0x78d'
+        audio-pid: '0x78e'
+    outputs:
+    - type: tcpserversink
+      host: 192.168.110.2
+      port: 8888
+    - type: udpsink
+      host: 224.100.1.1
+      port: 9000
+    - type: rtmpsink
+      location: rtmp://newproxy.vidivu.tv/chats/caricoder
+    - type: srtsink
+      uri: srt://:7001
+      mode: 2
+      latency: 1000
     transcoding:
       video:
         codec: x264enc
@@ -143,133 +143,327 @@ channels:
           width: 1280
           height: 720
         options:
-          bitrate: 2000  # in kbps
+          bitrate: 2000
           tune: zerolatency
           key-int-max: 60
       audio:
         codec: avenc_aac
         options:
-          bitrate: 192  # kbps
+          bitrate: 192
     mux:
       type: mpegtsmux
-      bitrate: 2500  # in kbps
+      bitrate: 2500
       program-number: 4001
       video-pid: '400'
       audio-pid: '401'
   channel5:
     inputs:
-      - type: srtsrc
-        uri: srt://192.168.2.100:20002
-        priority: 50  # lowest priority
-        options:
-          latency: 800
-          streamid: channel1
-        demux:
-          program-number: 1940
-          video-pid: '0x78d'
-          audio-pid: '0x78e'
-      - type: srtsrc
-        uri: srt://192.168.2.100:20002
-        priority: 50  # lowest priority
-        options:
-          latency: 800
-          streamid: channel1
-        demux:
-          program-number: 1940
-          video-pid: '0x78d'
-          audio-pid: '0x78e'
+    - type: srtsrc
+      uri: srt://192.168.2.100:20002
+      priority: 50
+      options:
+        latency: 800
+        streamid: channel1
+      demux:
+        program-number: 1940
+        video-pid: '0x78d'
+        audio-pid: '0x78e'
+    - type: srtsrc
+      uri: srt://192.168.2.100:20002
+      priority: 50
+      options:
+        latency: 800
+        streamid: channel1
+      demux:
+        program-number: 1940
+        video-pid: '0x78d'
+        audio-pid: '0x78e'
     outputs:
-      - type: udpsink
-        host: 224.100.1.1
-        port: 9000
-      - type: udpsink
-        host: 224.100.1.3
-        port: 9000
+    - type: udpsink
+      host: 224.100.1.1
+      port: 9000
+    - type: udpsink
+      host: 224.100.1.3
+      port: 9000
     transcoding:
       type: cpu_only
       video:
         deinterlace: true
         streams:
-          - codec: x264enc
-            resolution:
-              width: 1920
-              height: 1080
-            options:
-              bitrate: 4000  # in kbps
+        - codec: x264enc
+          resolution:
+            width: 1920
+            height: 1080
+          options:
+            bitrate: 4000
       audio:
         codec: avenc_aac
         options:
-          bitrate: 192  # kbps
+          bitrate: 192
     mux:
       type: mpegtsmux
-      bitrate: 4000  # in kbps
+      bitrate: 4000
       program-number: 5001
-      video-pid: ['500']
+      video-pid:
+      - '500'
       audio-pid: '503'
   channel6:
     inputs:
-      - type: srtsrc
-        uri: srt://192.168.2.100:10002
-        priority: 100  # Highest priority
-        options:
-          latency: 800
-          streamid: channel1
-        demux:
-          program-number: 1940
-          video-pid: '0x78d'
-          audio-pid: '0x78e'
-      - type: srtsrc
-        uri: srt://192.168.2.100:20002
-        priority: 50  # lowest priority
-        options:
-          latency: 800
-          streamid: channel1
-        demux:
-          program-number: 1940
-          video-pid: '0x78d'
-          audio-pid: '0x78e'
+    - type: srtsrc
+      uri: srt://192.168.2.100:10002
+      priority: 100
+      options:
+        latency: 800
+        streamid: channel1
+      demux:
+        program-number: 1940
+        video-pid: '0x78d'
+        audio-pid: '0x78e'
+    - type: srtsrc
+      uri: srt://192.168.2.100:20002
+      priority: 50
+      options:
+        latency: 800
+        streamid: channel1
+      demux:
+        program-number: 1940
+        video-pid: '0x78d'
+        audio-pid: '0x78e'
     outputs:
-      - type: udpsink
-        host: 224.100.1.2
-        port: 9000
+    - type: udpsink
+      host: 224.100.1.2
+      port: 9000
     transcoding:
       video:
         deinterlace: true
         streams:
-          - codec: passthrough
+        - codec: passthrough
       audio:
         codec: avenc_aac
         options:
-          bitrate: 192  # kbps
+          bitrate: 192
     mux:
       type: mpegtsmux
-      bitrate: 4000  # in kbps
+      bitrate: 4000
       program-number: 5001
-      video-pid: ['500']
+      video-pid:
+      - '500'
       audio-pid: '503'
   channel7:
     inputs:
-      - type: hlssrc
-        uri: "http://192.168.110.41/bet/index.m3u8"  # Replace with your HLS stream URL
-        options:
-          timeout: 10
-          retries: 3
+    - type: hlssrc
+      uri: http://192.168.110.41/bet/index.m3u8
+      options:
+        timeout: 10
+        retries: 3
     outputs:
-      - type: udpsink
-        host: 224.100.100.1
-        port: 20000
+    - type: udpsink
+      host: 224.100.100.1
+      port: 20000
     transcoding:
       video:
         deinterlace: true
         streams:
-          - codec: passthrough
+        - codec: passthrough
       audio:
         codec: passthrough
     mux:
       type: mpegtsmux
-      bitrate: 3000  # in kbps
+      bitrate: 3000
       program-number: 7001
       video-pid: '700'
       audio-pid: '701'
-
-
+  channel8:
+    inputs:
+    - type: hlssrc
+      uri: http://192.168.110.41/sonymovies/index.m3u8
+      options:
+        timeout: 10
+        retries: 3
+    outputs:
+    - type: udpsink
+      host: 224.100.100.100
+      port: 8000
+    transcoding:
+      video:
+        codec: passthrough
+        deinterlace: true
+        streams:
+        - codec: passthrough
+      audio:
+        codec: passthrough
+    mux:
+      type: mpegtsmux
+      bitrate: 3000
+      program-number: 1000
+      video-pid: '100'
+      audio-pid: '101'
+  channel9:
+    inputs:
+    - type: hlssrc
+      uri: http://192.168.110.41/sonymovies/index.m3u8
+      options:
+        timeout: 10
+        retries: 3
+    outputs:
+    - type: udpsink
+      host: 224.100.100.100
+      port: 5000
+    transcoding:
+      video:
+        codec: passthrough
+        deinterlace: true
+        streams:
+        - codec: passthrough
+      audio:
+        codec: passthrough
+    mux:
+      type: mpegtsmux
+      bitrate: 3000
+      program-number: 1000
+      video-pid: '100'
+      audio-pid: '101'
+  channel10:
+    inputs:
+    - type: hlssrc
+      uri: http://192.168.110.41/sonymovies/index.m3u8
+      options:
+        timeout: 10
+        retries: 3
+    outputs:
+    - type: udpsink
+      host: 224.100.100.100
+      port: 20000
+    transcoding:
+      video:
+        deinterlace: true
+        streams:
+        - codec: passthrough
+      audio:
+        codec: passthrough
+    mux:
+      type: mpegtsmux
+      bitrate: 3000
+      program-number: 1000
+      video-pid: '100'
+      audio-pid: '101'
+  channel11:
+    inputs:
+    - type: hlssrc
+      uri: http://192.168.110.41/sonymovies/index.m3u8
+      options:
+        timeout: 10
+        retries: 3
+    outputs:
+    - type: udpsink
+      host: 224.100.100.100
+      port: 30000
+    transcoding:
+      video:
+        deinterlace: true
+        streams:
+        - codec: passthrough
+      audio:
+        codec: passthrough
+    mux:
+      type: mpegtsmux
+      bitrate: 3000
+      program-number: 1000
+      video-pid: '100'
+      audio-pid: '101'
+  channel13:
+    inputs:
+    - type: hlssrc
+      uri: http://192.168.110.41/sonymovies/index.m3u8
+      options:
+        timeout: 10
+        retries: 3
+    outputs:
+    - type: udpsink
+      host: 224.100.100.100
+      port: 50000
+    transcoding:
+      video:
+        deinterlace: true
+        streams:
+        - codec: passthrough
+      audio:
+        codec: passthrough
+    mux:
+      type: mpegtsmux
+      bitrate: 3000
+      program-number: 1000
+      video-pid: '100'
+      audio-pid: '101'
+  channel14:
+    inputs:
+    - type: hlssrc
+      uri: http://192.168.110.41/sonymovies/index.m3u8
+      options:
+        timeout: 10
+        retries: 3
+    outputs:
+    - type: udpsink
+      host: 224.100.100.100
+      port: 51000
+    transcoding:
+      video:
+        deinterlace: true
+        streams:
+        - codec: passthrough
+      audio:
+        codec: passthrough
+    mux:
+      type: mpegtsmux
+      bitrate: 3000
+      program-number: 1000
+      video-pid: '100'
+      audio-pid: '101'
+  channel15:
+    inputs:
+    - type: hlssrc
+      uri: http://192.168.110.41/sonymovies/index.m3u8
+      options:
+        timeout: 10
+        retries: 3
+    outputs:
+    - type: udpsink
+      host: 224.100.100.100
+      port: 52000
+    transcoding:
+      video:
+        deinterlace: true
+        streams:
+        - codec: passthrough
+      audio:
+        codec: passthrough
+    mux:
+      type: mpegtsmux
+      bitrate: 3000
+      program-number: 1000
+      video-pid: '100'
+      audio-pid: '101'
+  bet:
+    inputs:
+    - type: hlssrc
+      uri: http://192.168.110.41/bet/index.m3u8
+      options:
+        timeout: 10
+        retries: 3
+    outputs:
+    - type: udpsink
+      host: 224.100.100.100
+      port: 45900
+    transcoding:
+      video:
+        deinterlace: true
+        streams:
+        - codec: passthrough
+      audio:
+        codec: passthrough
+    mux:
+      type: mpegtsmux
+      bitrate: 3000
+      program-number: 1000
+      video-pid: '100'
+      audio-pid: '101'
