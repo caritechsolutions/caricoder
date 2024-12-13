@@ -102,87 +102,92 @@ class HLSOutputHandler:
         """Determine which parsers to use based on input source and transcoding config"""
         video_parser = None
         audio_parser = None
+        max_retries = 10
+        retry_count = 0
 
-        try:
-            if self.mode == 'input':
-                # Read codec info from shm info files
+        while retry_count < max_retries:
+            try:
                 video_info_path = f"{self.socket_dir}/{self.channel_name}_video_shm_info"
                 audio_info_path = f"{self.socket_dir}/{self.channel_name}_audio_shm_info"
                 
-                with open(video_info_path, 'r') as f:
-                    video_info = json.loads(f.read())
-                with open(audio_info_path, 'r') as f:
-                    audio_info = json.loads(f.read())
-                
-                # Map input codecs to parsers
-                video_codec = video_info.get('codec')
-                audio_codec = audio_info.get('codec')
-                
-                video_parser = {
-                    'h264': 'h264parse',
-                    'hevc': 'h265parse',
-                    'mpeg2video': 'mpegvideoparse'
-                }.get(video_codec)
-                
-                audio_parser = {
-                    'aac': 'aacparse',
-                    'mp2': 'mpegaudioparse',
-                    'mp3': 'mpegaudioparse'
-                }.get(audio_codec)
-                
-            else:  # mode == 'output'
-                # Get transcoding settings
-                transcoding = self.channel_settings.get('transcoding', {})
-                
-                # Handle video parser selection
-                video_settings = transcoding.get('video', {})
-                if isinstance(video_settings.get('streams'), list):
-                    # Use first stream's settings
-                    video_codec = video_settings['streams'][0].get('codec', '')
-                else:
-                    video_codec = video_settings.get('codec', '')
-                
-                if video_codec == 'passthrough':
-                    # Read from video shm info file
-                    with open(f"{self.socket_dir}/{self.channel_name}_video_shm_info", 'r') as f:
+                if not (os.path.exists(video_info_path) and os.path.exists(audio_info_path)):
+                    retry_count += 1
+                    self.logger.info(f"Waiting for codec info files... Attempt {retry_count}/{max_retries}")
+                    time.sleep(5)
+                    continue
+
+                if self.mode == 'input':
+                    with open(video_info_path, 'r') as f:
                         video_info = json.loads(f.read())
-                    video_codec = video_info.get('codec')
-                
-                video_parser = {
-                    'x264enc': 'h264parse',
-                    'x265enc': 'h265parse',
-                    'h264': 'h264parse',
-                    'hevc': 'h265parse',
-                    'mpeg2video': 'mpegvideoparse'
-                }.get(video_codec)
-                
-                # Handle audio parser selection
-                audio_settings = transcoding.get('audio', {})
-                audio_codec = audio_settings.get('codec', '')
-                
-                if audio_codec == 'passthrough':
-                    # Read from audio shm info file
-                    with open(f"{self.socket_dir}/{self.channel_name}_audio_shm_info", 'r') as f:
+                    with open(audio_info_path, 'r') as f:
                         audio_info = json.loads(f.read())
+                    
+                    video_codec = video_info.get('codec')
                     audio_codec = audio_info.get('codec')
+                    
+                    video_parser = {
+                        'h264': 'h264parse',
+                        'hevc': 'h265parse',
+                        'mpeg2video': 'mpegvideoparse'
+                    }.get(video_codec)
+                    
+                    audio_parser = {
+                        'aac': 'aacparse',
+                        'mp2': 'mpegaudioparse',
+                        'mp3': 'mpegaudioparse'
+                    }.get(audio_codec)
+                    
+                else:  # mode == 'output'
+                    transcoding = self.channel_settings.get('transcoding', {})
+                    
+                    video_settings = transcoding.get('video', {})
+                    if isinstance(video_settings.get('streams'), list):
+                        video_codec = video_settings['streams'][0].get('codec', '')
+                    else:
+                        video_codec = video_settings.get('codec', '')
+                    
+                    if video_codec == 'passthrough':
+                        with open(video_info_path, 'r') as f:
+                            video_info = json.loads(f.read())
+                        video_codec = video_info.get('codec')
+                    
+                    video_parser = {
+                        'x264enc': 'h264parse',
+                        'x265enc': 'h265parse',
+                        'h264': 'h264parse',
+                        'hevc': 'h265parse',
+                        'mpeg2video': 'mpegvideoparse'
+                    }.get(video_codec)
+                    
+                    audio_settings = transcoding.get('audio', {})
+                    audio_codec = audio_settings.get('codec', '')
+                    
+                    if audio_codec == 'passthrough':
+                        with open(audio_info_path, 'r') as f:
+                            audio_info = json.loads(f.read())
+                        audio_codec = audio_info.get('codec')
+                    
+                    audio_parser = {
+                        'avenc_aac': 'aacparse',
+                        'avenc_mp2': 'mpegaudioparse',
+                        'aac': 'aacparse',
+                        'mp2': 'mpegaudioparse',
+                        'mp3': 'mpegaudioparse'
+                    }.get(audio_codec)
                 
-                audio_parser = {
-                    'avenc_aac': 'aacparse',
-                    'avenc_mp2': 'mpegaudioparse',
-                    'aac': 'aacparse',
-                    'mp2': 'mpegaudioparse',
-                    'mp3': 'mpegaudioparse'
-                }.get(audio_codec)
-            
-            if not video_parser or not audio_parser:
-                raise ValueError(f"Unsupported codec combination: video={video_codec}, audio={audio_codec}")
-            
-            self.logger.info(f"Selected parsers - Video: {video_parser}, Audio: {audio_parser}")
-            return video_parser, audio_parser
-            
-        except Exception as e:
-            self.logger.error(f"Error determining parser types: {str(e)}")
-            raise
+                if not video_parser or not audio_parser:
+                    raise ValueError(f"Unsupported codec combination: video={video_codec}, audio={audio_codec}")
+                
+                self.logger.info(f"Selected parsers - Video: {video_parser}, Audio: {audio_parser}")
+                return video_parser, audio_parser
+                
+            except (FileNotFoundError, json.JSONDecodeError) as e:
+                if retry_count == max_retries - 1:
+                    self.logger.error(f"Error determining parser types after {max_retries} retries: {str(e)}")
+                    raise
+                retry_count += 1
+                time.sleep(5)
+
 
 #main indent
     def create_pipeline(self):
@@ -195,8 +200,18 @@ class HLSOutputHandler:
         
         # Set up HLS output directory
         hls_dir = f"/var/www/html/content/{self.channel_name}"
-        os.makedirs(hls_dir, exist_ok=True)
+        try:
+            os.makedirs(hls_dir, mode=0o777, exist_ok=True)
+        except OSError as e:
+            self.logger.error(f"Failed to create HLS directory {hls_dir}: {str(e)}")
+            raise
         
+        # Verify directory exists and is writable
+        if not os.path.exists(hls_dir):
+            raise RuntimeError(f"HLS directory {hls_dir} does not exist")
+        if not os.access(hls_dir, os.W_OK):
+            raise RuntimeError(f"HLS directory {hls_dir} is not writable") 
+       
         # Set file locations
         self.hls_options['playlist-location'] = f"{hls_dir}/playlist.m3u8"
         self.hls_options['location'] = f"{hls_dir}/segment%05d.ts"
