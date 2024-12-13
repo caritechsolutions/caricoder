@@ -395,54 +395,6 @@ channels:
       program-number: 1000
       video-pid: '100'
       audio-pid: '101'
-  channel14:
-    inputs:
-    - type: hlssrc
-      uri: http://192.168.110.41/sonymovies/index.m3u8
-      options:
-        timeout: 10
-        retries: 3
-    outputs:
-    - type: udpsink
-      host: 224.100.100.100
-      port: 51000
-    transcoding:
-      video:
-        deinterlace: true
-        streams:
-        - codec: passthrough
-      audio:
-        codec: passthrough
-    mux:
-      type: mpegtsmux
-      bitrate: 3000
-      program-number: 1000
-      video-pid: '100'
-      audio-pid: '101'
-  channel15:
-    inputs:
-    - type: hlssrc
-      uri: http://192.168.110.41/sonymovies/index.m3u8
-      options:
-        timeout: 10
-        retries: 3
-    outputs:
-    - type: udpsink
-      host: 224.100.100.100
-      port: 52000
-    transcoding:
-      video:
-        deinterlace: true
-        streams:
-        - codec: passthrough
-      audio:
-        codec: passthrough
-    mux:
-      type: mpegtsmux
-      bitrate: 3000
-      program-number: 1000
-      video-pid: '100'
-      audio-pid: '101'
   bet:
     inputs:
     - type: hlssrc
@@ -454,6 +406,30 @@ channels:
     - type: udpsink
       host: 224.100.100.100
       port: 45900
+    transcoding:
+      video:
+        deinterlace: true
+        streams:
+        - codec: passthrough
+      audio:
+        codec: passthrough
+    mux:
+      type: mpegtsmux
+      bitrate: 3000
+      program-number: 1000
+      video-pid: '100'
+      audio-pid: '101'
+  tester:
+    inputs:
+    - type: hlssrc
+      uri: http://192.168.110.50/cnnus264_hotel/index.m3u8
+      options:
+        timeout: 10
+        retries: 3
+    outputs:
+    - type: udpsink
+      host: 224.100.100.100
+      port: 5000
     transcoding:
       video:
         deinterlace: true

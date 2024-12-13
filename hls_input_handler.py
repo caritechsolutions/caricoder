@@ -342,7 +342,7 @@ class InputPipelineHandler:
         """Create and configure all GStreamer elements for the pipeline."""
         self.logger.info("Creating GStreamer elements")
         
-        # Create elements
+        # Create basic pipeline elements 
         self.elements.update({
             'source': Gst.ElementFactory.make("souphttpsrc", "source"),
             'queue1': Gst.ElementFactory.make("queue", "queue1"),
@@ -352,11 +352,8 @@ class InputPipelineHandler:
             'tsdemux': Gst.ElementFactory.make("tsdemux", "tsdemux"),
             'video_queue1': Gst.ElementFactory.make("queue", "video_queue1"),
             'video_watchdog': Gst.ElementFactory.make("watchdog", "video_watchdog"),
-            'video_parser': Gst.ElementFactory.make("h265parse", "video_parser"),
-            'video_queue2': Gst.ElementFactory.make("queue", "video_queue2"),
             'audio_queue1': Gst.ElementFactory.make("queue", "audio_queue1"),
             'audio_watchdog': Gst.ElementFactory.make("watchdog", "audio_watchdog"),
-            'audio_parser': Gst.ElementFactory.make("aacparse", "audio_parser"),
             'audio_queue2': Gst.ElementFactory.make("queue", "audio_queue2"),
             'mpegtsmux': Gst.ElementFactory.make("mpegtsmux", "mux"),
             'identity': Gst.ElementFactory.make("identity", "identity"),
@@ -364,6 +361,32 @@ class InputPipelineHandler:
             'output_watchdog': Gst.ElementFactory.make("watchdog", "output_watchdog"),
             'shmsink': Gst.ElementFactory.make("shmsink", "shmsink")
         })
+
+        # Create video parser based on detected codec
+        if self.video_codec == 'h264':
+            self.elements['video_parser'] = Gst.ElementFactory.make("h264parse", "video_parser")
+        elif self.video_codec in ['hevc', 'h265']:
+            self.elements['video_parser'] = Gst.ElementFactory.make("h265parse", "video_parser")
+        elif self.video_codec == 'mpeg2video':
+            self.elements['video_parser'] = Gst.ElementFactory.make("mpegvideoparse", "video_parser")
+        else:
+            raise ValueError(f"Unsupported video codec: {self.video_codec}")
+
+        # Create audio parser based on detected codec  
+        if self.audio_codec == 'aac':
+            self.elements['audio_parser'] = Gst.ElementFactory.make("aacparse", "audio_parser")
+        elif self.audio_codec in ['mp2', 'mp3']:
+            self.elements['audio_parser'] = Gst.ElementFactory.make("mpegaudioparse", "audio_parser")
+        else:
+            raise ValueError(f"Unsupported audio codec: {self.audio_codec}")
+
+        self.elements['video_queue2'] = Gst.ElementFactory.make("queue", "video_queue2")
+
+        # Verify parser creation
+        if not self.elements['video_parser']:
+            raise RuntimeError(f"Failed to create parser for video codec: {self.video_codec}")
+        if not self.elements['audio_parser']:
+            raise RuntimeError(f"Failed to create parser for audio codec: {self.audio_codec}")
 
         # Configure source
         self.elements['source'].set_property('location', self.selected_input['uri'])
